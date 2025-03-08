@@ -192,12 +192,12 @@ class StatusBarView: NSView {
     private func formatSpeedSimple(_ bytes: UInt64) -> String {
         let kb = Double(bytes) / 1024.0
         if kb < 0.1 {
-            return "0KB"
+            return "    0KB"
         } else if kb < 1000 {
-            return String(format: "%3.0fKB", kb)
+            return String(format: "%5.0fKB", kb)
         } else {
             let mb = kb / 1024.0
-            return String(format: "%.0fMB", mb)
+            return String(format: "%5.0fMB", mb)
         }
     }
 }
